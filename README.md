@@ -1,4 +1,4 @@
-# TA01 — Segmentação por textura (só clássicos, sem IA)
+# TA01 — Segmentação por textura
 
 Banco de 8 filtros em 1 escala + pirâmide gaussiana (3 escalas) = 24 mapas.
 Vetor = média em janela de cada mapa → **24D**. Agrupo = KMeans euclidiano.
@@ -9,7 +9,7 @@ Vetor = média em janela de cada mapa → **24D**. Agrupo = KMeans euclidiano.
 ## Rodar (1 comando)
 
 ```bash
-nix develop        # ou nix-shell; ou pip install -r requirements.txt
+nix-shell          # ambiente: python do nix + resto via pip (requirements.txt)
 ./run.sh
 ```
 

@@ -1,3 +1,12 @@
+---
+title: "Relatório TA01 — Segmentação por textura"
+lang: pt-BR
+geometry: margin=2.5cm
+urlcolor: blue
+header-includes: |
+  \usepackage{graphicx}
+---
+
 # Relatório TA01 — Segmentação por textura (rascunho em formato artigo)
 
 > Link do código: <https://github.com/herijooj/visao-ta01-textura>
@@ -31,8 +40,14 @@ resize p/ 512 (2ª opção do enunciado). 8×3 = 24 mapas.
   limitação esperada do Gabor sem invariância.
 - `segment mosaico.png --k 9` → mosaico 3x3 com as 9 classes, mapa recupera
   os blocos (fig. `seg.png`; bordas sangram pelo efeito da janela 31).
+
+![Mosaico 3x3 com as 9 classes (entrada)](mosaico.png){ width=60% }
+
+![Mapa segmentado K=9: original (esq.) + grupos por cor (dir.)](seg.png){ width=90% }
 - `predict`: foto de arroz → `Arroz` (dist 0.86 vs 4.30 da 2ª opção).
 - Etapas por classe em `figs/out_etapas_*/etapas.png`.
+
+![Etapas: original → 8 filtros → 3 escalas → segmentado (ex. Arroz)](figs/out_etapas_Arroz/etapas.png){ width=90% }
 - Limitações: rotação em texturas orientadas; borda da janela borra fronteiras.
 
 ## 5. Conclusão
