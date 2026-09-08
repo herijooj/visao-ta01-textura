@@ -23,16 +23,19 @@ resize p/ 512 (2ª opção do enunciado). 8×3 = 24 mapas.
 (`convert.py` → `data/`). Ambiente reproduzível: `flake.nix`/`shell.nix`.
 
 ## 4. Resultados
-- `classify --k 9`: 8 das 9 classes com 4/4 no mesmo grupo; madeira espalhou
-  (2 próprias + 1 com arroz + 1 com alumínio) — sensibilidade à rotação/escala
-  do veio, esperada em Gabor sem invariância.
+- `classify --k 9`: 8 das 9 classes com 4/4 no mesmo grupo; madeira com 3/4
+  (só `131641` cai com arroz). Achado: após recortar fundos de arroz/couro/papel,
+  os centroides deslocaram e uma foto da madeira antes agrupada com alumínio
+  voltou ao grupo da madeira (35/36, ~97%) — mostra que fundo estranho à textura
+  contamina o vetor médio. A restante diverge no veio (orientação/escala),
+  limitação esperada do Gabor sem invariância.
 - `segment mosaico.png --k 4`: mapa recupera os quadrantes (fig. `seg.png`).
 - `predict`: foto de arroz → `Arroz` (dist 0.86 vs 4.30 da 2ª opção).
 - Etapas por classe em `figs/out_etapas_*/etapas.png`.
 - Limitações: rotação em texturas orientadas; borda da janela borra fronteiras.
 
 ## 5. Conclusão
-24 médias + Euclides separam 8/9 texturas e geram mapas por grupos. Suficiente p/ TA01.
+24 médias + Euclides separam 8/9 texturas (35/36) e geram mapas por grupos. Suficiente p/ TA01.
 
 ## Referências
 Slides Textura/Filtros/Clustering da disciplina; MacQueen/KMeans 1967;
