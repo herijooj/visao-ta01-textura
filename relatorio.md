@@ -7,17 +7,16 @@ header-includes: |
   \usepackage{graphicx}
 ---
 
-# Relatório TA01 - Segmentação por textura (rascunho em formato artigo)
+# Relatório TA01 - Segmentação por textura
 
 > Link do código: <https://github.com/herijooj/visao-ta01-textura>
 
 ## 1. Introdução
-Tipo escolhido: texturas domésticas/equipamentos - alumínio, arroz, aveia,
+Texturas: alumínio, arroz, aveia,
 batata-palha, couro, granola, madeira, papel, toalha (9 classes × 4 fotos = 36).
-Por quê: grãos e tramas bem distintos entre classes, fáceis de fotografar em casa,
-cada um excita um subconjunto diferente do banco de filtros.
+Por quê: fáceis de fotografar em casa.
 
-## 2. Método - só clássicos, sem IA
+## 2. Método
 
 - **Filtros - 8 em 1 escala:**
   - 4 Gabor orientados - 0/45/90/135 graus, k=21, sigma=4, lambda=10
@@ -44,7 +43,7 @@ cada um excita um subconjunto diferente do banco de filtros.
 
 ## 3. Dados
 36 fotos próprias (`raw/`), crop quadrado central + resize 512×512 + RGB→cinza
-(`convert.py` → `data/`). Ambiente reproduzível: `flake.nix`/`shell.nix`.
+(`convert.py` → `data/`).
 
 ## 4. Resultados
 - `classify --k 9`: 8 das 9 classes com 4/4 no mesmo grupo; madeira com 3/4
