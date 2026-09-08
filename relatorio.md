@@ -29,7 +29,8 @@ resize p/ 512 (2ª opção do enunciado). 8×3 = 24 mapas.
   voltou ao grupo da madeira (35/36, ~97%) — mostra que fundo estranho à textura
   contamina o vetor médio. A restante diverge no veio (orientação/escala),
   limitação esperada do Gabor sem invariância.
-- `segment mosaico.png --k 4`: mapa recupera os quadrantes (fig. `seg.png`).
+- `segment mosaico.png --k 9` → mosaico 3x3 com as 9 classes, mapa recupera
+  os blocos (fig. `seg.png`; bordas sangram pelo efeito da janela 31).
 - `predict`: foto de arroz → `Arroz` (dist 0.86 vs 4.30 da 2ª opção).
 - Etapas por classe em `figs/out_etapas_*/etapas.png`.
 - Limitações: rotação em texturas orientadas; borda da janela borra fronteiras.
