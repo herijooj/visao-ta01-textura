@@ -9,9 +9,9 @@ Por quê: grãos e tramas bem distintos entre classes, fáceis de fotografar em 
 cada um excita um subconjunto diferente do banco de filtros.
 
 ## 2. Método (só clássicos, sem IA)
-**Filtros (8 em 1 escala):** 4 Gabor orientados (0/45/90/135°, k=21, σ=4, λ=10),
-Gauss 5×5 (circular), Laplaciano k=5 (circular), Sobel X/Y. Resposta em módulo.
-**3 escalas:** pirâmide — Gauss + `pyrDown` à metade por nível (512→256→128),
+**Filtros (8 em 1 escala):** 4 Gabor orientados (0/45/90/135 graus, k=21, sigma=4, lambda=10),
+Gauss 5x5 (circular), Laplaciano k=5 (circular), Sobel X/Y. Resposta em módulo.
+**3 escalas:** pirâmide — Gauss + `pyrDown` à metade por nível (512 para 256 para 128),
 resize p/ 512 (2ª opção do enunciado). 8×3 = 24 mapas.
 **Vetor 24D:** média em janela 31×31 (`blur`) de cada mapa, cf. slides.
 1 vetor/imagem = média global (classificação); 1 vetor/bloco p/ segmentação.
