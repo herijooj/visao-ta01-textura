@@ -1,5 +1,6 @@
 ---
 title: "Relatório TA01 - Segmentação por textura"
+author: "Heric Camargo - GRR 20203959"
 lang: pt-BR
 geometry: margin=2.5cm
 urlcolor: blue
@@ -8,6 +9,8 @@ header-includes: |
 ---
 
 # Relatório TA01 - Segmentação por textura
+
+Heric Camargo - GRR 20203959
 
 > Link do código: <https://github.com/herijooj/visao-ta01-textura>
 
